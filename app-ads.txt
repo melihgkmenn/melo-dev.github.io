@@ -1,0 +1,8 @@
+# app-ads.txt dosyası - AdMob için
+# Bu dosya GitHub Pages üzerinden yayınlanmaktadır
+# Erişim: https://melihgkmenn.github.io/melo-dev.github.io/app-ads.txt
+
+# Google AdMob Publisher ID
+# Format: google.com, PUBLISHER_ID, DIRECT
+google.com, pub-6415246570114357, DIRECT, f08c47fec0942fa0
+
