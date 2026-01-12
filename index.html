@@ -1,36 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Melih Gökmen – iOS Developer</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #f5f5f7; margin: 0; color: #333; text-align: center; }
-    header { padding: 60px 20px 20px; }
-    h1 { font-size: 2.2rem; margin-bottom: 10px; }
-    p { max-width: 600px; margin: 0 auto 25px; line-height: 1.5; }
-    a { color: #007AFF; text-decoration: none; margin: 0 10px; }
-    a:hover { text-decoration: underline; }
-    .socials { margin-top: 20px; }
-    footer { font-size: 0.9rem; color: #777; padding: 30px; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Melih Gökmen</h1>
-    <h3>iOS Developer</h3>
-    <p>I design and build intuitive iOS applications with a focus on performance, clean architecture, and delightful user experience. You can reach out for app support or collaboration inquiries below.</p>
+  <title>Melih Gökmen | iOS & Mobile Architect</title>
+  <meta name="description"
+    content="Portfolio of Melih Gökmen, an iOS Developer, React Native Expert, and Automation Specialist." />
 
-    <div class="socials">
-      <a href="mailto:melihgkmen@outlook.com">Email</a> |
-      <a href="https://github.com/melihgkmenn">GitHub</a> |
-      <a href="https://x.com/mlgkmn">Twitter</a> |
-      <a href="https://www.linkedin.com/in/melih-gokmen-ios/">LinkedIn</a>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Melih.</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
     </div>
   </header>
 
-  <footer>
-    © 2025 Melo. All rights reserved.
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <img src="https://github.com/melihgkmen.png" alt="Melih Gökmen" class="profile-pic">
+      <h1>Hi, I'm <span>Melih Gökmen</span></h1>
+      <div class="typewriter">
+        <span id="typing-text"></span><span class="cursor"></span>
+      </div>
+      <p style="max-width: 600px; margin: 20px auto; color: var(--text-secondary);">
+        Building world-class mobile experiences with precision and passion.
+      </p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#services" class="btn btn-secondary">View Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="reveal">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div
+        style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">
+        <p>
+          I am a passionate software engineer specializing in <strong>iOS Development</strong> and <strong>React
+            Native</strong>.
+          With a deep understanding of the Apple ecosystem and cross-platform technologies, I craft applications that
+          are not
+          only functional but also visually stunning and intuitive.
+        </p>
+        <br>
+        <p>
+          Beyond mobile apps, I excel in <strong>Automation</strong>, optimizing workflows and building efficiency into
+          every project.
+          Whether it's native Swift or JavaScript-based ecosystems, I deliver robust, scalable solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title reveal">What I Do</h2>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="card reveal">
+          <div class="card-icon"><i class="fa-brands fa-apple"></i></div>
+          <h3>iOS Development</h3>
+          <p>Native iOS apps built with Swift and SwiftUI/UIKit. Focus on performance, human interface guidelines, and
+            seamless user experiences.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Swift</span>
+            <span class="tech-tag">SwiftUI</span>
+            <span class="tech-tag">Combine</span>
+            <span class="tech-tag">XCode</span>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="card reveal" style="transition-delay: 0.1s;">
+          <div class="card-icon"><i class="fa-brands fa-react"></i></div>
+          <h3>React Native</h3>
+          <p>Cross-platform mobile applications that feel native. single codebase, dual platform deployment for maximum
+            reach and efficiency.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Expo</span>
+            <span class="tech-tag">Redux</span>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="card reveal" style="transition-delay: 0.2s;">
+          <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+          <h3>Automation & Tools</h3>
+          <p>Custom scripts and automation workflows to streamline business processes. From CI/CD pipelines to data
+            processing bots.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Shell Scripting</span>
+            <span class="tech-tag">Fastlane</span>
+            <span class="tech-tag">GitHub Actions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact">
+    <div class="container reveal">
+      <h2 style="margin-bottom: 30px;">Let's Connect</h2>
+      <div class="social-links">
+        <a href="mailto:melihgkmen@outlook.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/melihgkmenn" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com/mlgkmn" target="_blank" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/melih-gokmen-ios/" target="_blank" title="LinkedIn"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+      <p style="color: var(--text-secondary);">&copy; 2025 Melih Gökmen. Built with ☕ and Code.</p>
+    </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
+
 </html>
