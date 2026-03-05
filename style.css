@@ -518,14 +518,21 @@ footer {
 
 /* Scroll reveal utility class */
 .reveal {
+  opacity: 1;
+  /* Changed from 0 to 1 for safety */
+  transform: none;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* If JS is active, we can start them hidden and reveal */
+.js-enabled .reveal:not(.active) {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s ease-out;
 }
 
 .reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 /* Responsive */

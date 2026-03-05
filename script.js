@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.classList.add('js-enabled');
+
   // --- i18next Localization ---
   const resources = {
     en: {
@@ -117,9 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Update typewriter if it exists
-    if (i18next.exists('typewriter')) {
-      currentTypewriterStrings = i18next.t('typewriter', { returnObjects: true });
+    // Update typewriter if it exists strings
+    const strings = i18next.t('typewriter', { returnObjects: true });
+    if (Array.isArray(strings)) {
+      currentTypewriterStrings = strings;
+      textIndex = 0;
+      charIndex = 0;
+      isDeleting = false;
     }
   }
 
@@ -208,8 +214,16 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(revealCallback, { threshold: 0.05 });
+    const observer = new IntersectionObserver(revealCallback, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -50px 0px'
+    });
     revealElements.forEach(el => observer.observe(el));
+
+    // Safety fallback: Reveal all after 2.5 seconds if observer hasn't triggered
+    setTimeout(() => {
+      revealElements.forEach(el => el.classList.add('active'));
+    }, 2500);
   } else {
     // Fallback for older browsers
     revealElements.forEach(el => el.classList.add('active'));
