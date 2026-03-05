@@ -116,6 +116,8 @@ nav {
   gap: 8px;
   font-size: 0.85rem;
   color: var(--text-secondary);
+  position: relative;
+  z-index: 1010;
 }
 
 .lang-btn {
@@ -125,7 +127,8 @@ nav {
   cursor: pointer;
   font-weight: 600;
   transition: var(--transition);
-  padding: 4px;
+  padding: 8px 4px;
+  pointer-events: auto;
 }
 
 .lang-btn.active {

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.documentElement.classList.add('js-enabled');
+  console.log("Portfolio Initialized");
 
-  // --- i18next Localization ---
+  // --- i18next Localization Resources ---
   const resources = {
     en: {
       translation: {
@@ -81,46 +81,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Safe checks for i18next
-  if (typeof i18next !== 'undefined') {
-    const detector = typeof i18nextBrowserLanguageDetector !== 'undefined' ? i18nextBrowserLanguageDetector : null;
-    let i18nInstance = i18next;
-
-    if (detector) {
-      i18nInstance = i18nInstance.use(detector);
-    }
-
-    i18nInstance.init({
-      resources,
-      fallbackLng: 'en',
-      detection: {
-        order: ['localStorage', 'navigator'],
-        lookupLocalStorage: 'lng',
-        caches: ['localStorage']
-      },
-      debug: false
-    }, (err, t) => {
-      if (err) return console.error(err);
-      updateContent();
-      updateActiveButton(i18next.language);
-      startTypewriter(); // Start after init
-    });
-  } else {
-    // If i18next fails, still try to run other features
-    console.error('i18next not loaded');
-    startTypewriter();
-  }
-
   function updateContent() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (i18next.exists(key)) {
+      if (typeof i18next !== 'undefined' && i18next.exists(key)) {
         el.innerHTML = i18next.t(key);
       }
     });
 
-    // Update typewriter if it exists strings
-    const strings = i18next.t('typewriter', { returnObjects: true });
+    const strings = (typeof i18next !== 'undefined') ? i18next.t('typewriter', { returnObjects: true }) : null;
     if (Array.isArray(strings)) {
       currentTypewriterStrings = strings;
       textIndex = 0;
@@ -130,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateActiveButton(lng) {
-    const lang = lng ? lng.split('-')[0] : 'en'; // handle pt-BR etc
+    const lang = lng ? lng.split('-')[0] : 'en';
     const btnEn = document.getElementById('lang-en');
     const btnTr = document.getElementById('lang-tr');
     if (lang === 'tr') {
@@ -142,24 +111,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const btnEn = document.getElementById('lang-en');
-  const btnTr = document.getElementById('lang-tr');
-
-  btnEn?.addEventListener('click', () => {
-    i18next.changeLanguage('en', () => {
-      localStorage.setItem('lng', 'en');
+  // Initial i18next Setup
+  if (typeof i18next !== 'undefined') {
+    i18next.init({
+      resources,
+      lng: localStorage.getItem('lng') || 'en',
+      fallbackLng: 'en',
+      debug: false
+    }, (err, t) => {
+      if (err) return console.error(err);
       updateContent();
-      updateActiveButton('en');
+      updateActiveButton(i18next.language);
+      startTypewriter();
     });
-  });
 
-  btnTr?.addEventListener('click', () => {
-    i18next.changeLanguage('tr', () => {
-      localStorage.setItem('lng', 'tr');
-      updateContent();
-      updateActiveButton('tr');
+    // Event Listeners
+    document.getElementById('lang-en')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      i18next.changeLanguage('en', () => {
+        localStorage.setItem('lng', 'en');
+        updateContent();
+        updateActiveButton('en');
+      });
     });
-  });
+
+    document.getElementById('lang-tr')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      i18next.changeLanguage('tr', () => {
+        localStorage.setItem('lng', 'tr');
+        updateContent();
+        updateActiveButton('tr');
+      });
+    });
+  } else {
+    console.error("i18next library is missing.");
+    startTypewriter(); // Fallback
+  }
 
   // --- Typewriter Effect ---
   const textElement = document.getElementById('typing-text');
@@ -173,6 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function type() {
     if (!textElement) return;
     const currentText = currentTypewriterStrings[textIndex];
+
     if (isDeleting) {
       textElement.textContent = currentText.substring(0, charIndex - 1);
       charIndex--;
@@ -197,14 +185,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function startTypewriter() {
     if (textElement && !typewriterTimeout) {
       if (typeof i18next !== 'undefined' && i18next.exists('typewriter')) {
-        currentTypewriterStrings = i18next.t('typewriter', { returnObjects: true });
+        const strings = i18next.t('typewriter', { returnObjects: true });
+        if (Array.isArray(strings)) currentTypewriterStrings = strings;
       }
       type();
     }
   }
 
-  // --- Section Visibility ---
-  // Ensure all sections are visible immediately
+  // --- Section Visibility (Force Show) ---
   document.querySelectorAll('.reveal').forEach(el => {
     el.classList.add('active');
   });
@@ -212,11 +200,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Smooth Scrolling ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      e.preventDefault();
       const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+      if (targetId === '#') {
+        e.preventDefault();
+        return;
+      }
       const target = document.querySelector(targetId);
       if (target) {
+        e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth' });
       }
     });
