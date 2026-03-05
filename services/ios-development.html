@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melih Gökmen | Service Details</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            padding-top: 100px;
+        }
+
+        .content-area {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-nav {
+            margin-bottom: 30px;
+        }
+
+        .detail-card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(12px);
+        }
+
+        h2 {
+            color: var(--accent-primary);
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        li i {
+            color: var(--accent-secondary);
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../" class="logo">Melih.</a>
+            </nav>
+        </div>
+    </header>
+    <div class="content-area">
+        <div class="back-nav">
+            <a href="../#services" style="color: var(--text-secondary);"><i class="fa-solid fa-arrow-left"></i> Back to
+                Services</a>
+        </div>
+        <div class="detail-card">
+            <div id="service-content">
+                <!-- Content will be injected based on the service -->
+                <h2>iOS Development Specialist</h2>
+                <p>Expert in building native iOS applications using Apple's latest technologies. I deliver
+                    high-performance, polished apps that follow Apple's Human Interface Guidelines.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> <strong>Swift & SwiftUI:</strong> Modern, declarative UI
+                        development.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Performance:</strong> Memory management (ARC) and
+                        smooth 60/120 FPS animations.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Ecosystem:</strong> WidgetKit, App Intents, and iCloud
+                        integration.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

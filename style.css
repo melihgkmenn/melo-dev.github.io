@@ -110,6 +110,50 @@ nav {
   color: var(--text-main);
 }
 
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  padding: 4px;
+}
+
+.lang-btn.active {
+  color: var(--accent-primary);
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--text-main);
+}
+
+.service-link {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+.service-link i {
+  transition: var(--transition);
+}
+
+.service-link:hover i {
+  transform: translateX(5px);
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;

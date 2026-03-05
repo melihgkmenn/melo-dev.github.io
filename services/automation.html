@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melih Gökmen | Service Details</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            padding-top: 100px;
+        }
+
+        .content-area {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-nav {
+            margin-bottom: 30px;
+        }
+
+        .detail-card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(12px);
+        }
+
+        h2 {
+            color: var(--accent-primary);
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        li i {
+            color: var(--accent-secondary);
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../" class="logo">Melih.</a>
+            </nav>
+        </div>
+    </header>
+    <div class="content-area">
+        <div class="back-nav">
+            <a href="../#services" style="color: var(--text-secondary);"><i class="fa-solid fa-arrow-left"></i> Back to
+                Services</a>
+        </div>
+        <div class="detail-card">
+            <div id="service-content">
+                <!-- Content will be injected based on the service -->
+                <h2>Automation & Workflow Specialist</h2>
+                <p>I optimize development and business processes through intelligent automation. I focus on reducing
+                    manual tasks and increasing reliability.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> <strong>CI/CD:</strong> GitHub Actions, Bitrise, and Fastlane
+                        for mobile deployments.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Scripting:</strong> Custom Python and Shell tools for
+                        data processing and bot development.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Testing:</strong> Automated end-to-end testing
+                        strategies.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

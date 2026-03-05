@@ -16,23 +16,32 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <!-- i18next for translations -->
+  <script src="https://unpkg.com/i18next@23.5.1/dist/umd/i18next.min.js"></script>
+  <script
+    src="https://unpkg.com/i18next-browser-languagedetector@7.1.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navigation -->
   <header>
     <div class="container">
       <nav>
         <a href="#" class="logo">Melih.</a>
         <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#apps">Apps</a>
-          <a href="#services">Services</a>
-          <a href="links/">Connect</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#apps" data-i18n="nav.apps">Apps</a>
+          <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="links/" data-i18n="nav.connect">Connect</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="lang-switcher">
+          <button id="lang-en" class="lang-btn active">EN</button>
+          <span>/</span>
+          <button id="lang-tr" class="lang-btn">TR</button>
         </div>
       </nav>
     </div>
@@ -42,16 +51,16 @@
   <section class="hero">
     <div class="container hero-content">
       <img src="https://github.com/melihgkmen.png" alt="Melih Gökmen" class="profile-pic">
-      <h1>Hi, I'm <span>Melih Gökmen</span></h1>
+      <h1 data-i18n="hero.greeting">Hi, I'm <span>Melih Gökmen</span></h1>
       <div class="typewriter">
         <span id="typing-text"></span><span class="cursor"></span>
       </div>
-      <p style="max-width: 600px; margin: 20px auto; color: var(--text-secondary);">
+      <p style="max-width: 600px; margin: 20px auto; color: var(--text-secondary);" data-i18n="hero.subheadline">
         Building world-class mobile experiences with precision and passion.
       </p>
       <div class="cta-buttons">
-        <a href="#contact" class="btn btn-primary">Get in Touch</a>
-        <a href="#services" class="btn btn-secondary">View Work</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta_contact">Get in Touch</a>
+        <a href="#services" class="btn btn-secondary" data-i18n="hero.cta_work">View Work</a>
       </div>
     </div>
   </section>
@@ -155,46 +164,60 @@
       <h2 class="section-title reveal">What I Do</h2>
 
       <div class="services-grid">
-        <!-- Service 1 -->
+        <!-- Service 1: iOS -->
         <div class="card reveal">
           <div class="card-icon"><i class="fa-brands fa-apple"></i></div>
-          <h3>iOS Development</h3>
-          <p>Native iOS apps built with Swift and SwiftUI/UIKit. Focus on performance, human interface guidelines, and
-            seamless user experiences.</p>
+          <h3 data-i18n="services.ios.title">iOS Development</h3>
+          <p data-i18n="services.ios.desc">Native iOS apps built with Swift and SwiftUI/UIKit. Focus on performance and
+            human interface guidelines.</p>
           <div class="tech-stack">
             <span class="tech-tag">Swift</span>
             <span class="tech-tag">SwiftUI</span>
-            <span class="tech-tag">Combine</span>
-            <span class="tech-tag">XCode</span>
           </div>
+          <a href="services/ios-development.html" class="service-link" data-i18n="services.learn_more">Learn More <i
+              class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <!-- Service 2 -->
+        <!-- Service 2: Flutter -->
         <div class="card reveal" style="transition-delay: 0.1s;">
+          <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3 data-i18n="services.flutter.title">Flutter Development</h3>
+          <p data-i18n="services.flutter.desc">High-performance cross-platform apps with Dart. Beautiful UIs and unified
+            codebase for iOS & Android.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">Riverpod</span>
+          </div>
+          <a href="services/flutter-development.html" class="service-link" data-i18n="services.learn_more">Learn More <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 3: React Native -->
+        <div class="card reveal" style="transition-delay: 0.2s;">
           <div class="card-icon"><i class="fa-brands fa-react"></i></div>
-          <h3>React Native</h3>
-          <p>Cross-platform mobile applications that feel native. single codebase, dual platform deployment for maximum
-            reach and efficiency.</p>
+          <h3 data-i18n="services.rn.title">React Native</h3>
+          <p data-i18n="services.rn.desc">Dual platform deployment with single codebase. Scalable and efficient
+            cross-platform solutions.</p>
           <div class="tech-stack">
             <span class="tech-tag">React Native</span>
             <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Expo</span>
-            <span class="tech-tag">Redux</span>
           </div>
+          <a href="services/react-native.html" class="service-link" data-i18n="services.learn_more">Learn More <i
+              class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <!-- Service 3 -->
-        <div class="card reveal" style="transition-delay: 0.2s;">
+        <!-- Service 4: Automation -->
+        <div class="card reveal" style="transition-delay: 0.3s;">
           <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
-          <h3>Automation & Tools</h3>
-          <p>Custom scripts and automation workflows to streamline business processes. From CI/CD pipelines to data
-            processing bots.</p>
+          <h3 data-i18n="services.automation.title">Automation & Tools</h3>
+          <p data-i18n="services.automation.desc">Custom scripts and CI/CD pipelines to streamline development and
+            business processes.</p>
           <div class="tech-stack">
             <span class="tech-tag">Python</span>
-            <span class="tech-tag">Shell Scripting</span>
             <span class="tech-tag">Fastlane</span>
-            <span class="tech-tag">GitHub Actions</span>
           </div>
+          <a href="services/automation.html" class="service-link" data-i18n="services.learn_more">Learn More <i
+              class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
