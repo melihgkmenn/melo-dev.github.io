@@ -7,6 +7,7 @@
     <title>Melih Gökmen | Service Details</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/i18next@23.5.1/dist/umd/i18next.min.js"></script>
     <style>
         body {
             padding-top: 100px;
@@ -59,6 +60,11 @@
         <div class="container">
             <nav>
                 <a href="../" class="logo">Melih.</a>
+                <div class="lang-switcher">
+                    <button id="lang-en" class="lang-btn">EN</button>
+                    <span>/</span>
+                    <button id="lang-tr" class="lang-btn">TR</button>
+                </div>
             </nav>
         </div>
     </header>
@@ -70,20 +76,79 @@
         <div class="detail-card">
             <div id="service-content">
                 <!-- Content will be injected based on the service -->
-                <h2>Automation & Workflow Specialist</h2>
-                <p>I optimize development and business processes through intelligent automation. I focus on reducing
-                    manual tasks and increasing reliability.</p>
+                <h2 data-i18n="service.title">Flutter Development Specialist</h2>
+                <p data-i18n="service.intro">I build high-quality, high-performance mobile applications using the
+                    Flutter framework and Dart language. My focus is on creating seamless cross-platform experiences
+                    that feel truly native.</p>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> <strong>CI/CD:</strong> GitHub Actions, Bitrise, and Fastlane
-                        for mobile deployments.</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Scripting:</strong> Custom Python and Shell tools for
-                        data processing and bot development.</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Testing:</strong> Automated end-to-end testing
-                        strategies.</li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list1"><strong>State
+                                Management:</strong> Expert usage of Riverpod, Provider, and Bloc.</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list2"><strong>Architecture:</strong>
+                            Clean Architecture and Domain-Driven Design (DDD) principles.</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list3"><strong>Network &
+                                API:</strong> Seamless integration with REST APIs and Firebase.</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list4"><strong>Animation:</strong>
+                            Complex custom animations and smooth UI transitions.</span></li>
                 </ul>
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const resources = {
+                en: {
+                    translation: {
+                        service: {
+                            title: "Automation & Workflow Specialist",
+                            intro: "Expert in optimizing development and business processes through intelligent automation. I focus on reducing manual tasks and increasing reliability.",
+                            list1: "<strong>CI/CD:</strong> GitHub Actions, Bitrise, and Fastlane for mobile deployments.",
+                            list2: "<strong>Scripting:</strong> Custom Python and Shell tools for data processing and bot development.",
+                            list3: "<strong>Testing:</strong> Automated end-to-end testing strategies.",
+                            list4: "<strong>Process:</strong> Workflow streamlining and developer experience (DevEx) improvements."
+                        }
+                    }
+                },
+                tr: {
+                    translation: {
+                        service: {
+                            title: "Otomasyon ve İş Akışı Uzmanı",
+                            intro: "Akıllı otomasyon yoluyla geliştirme ve iş süreçlerini optimize etme uzmanı. Manuel görevleri azaltmaya ve güvenilirliği artırmaya odaklanıyorum.",
+                            list1: "<strong>CI/CD:</strong> Mobil dağıtımlar için GitHub Actions, Bitrise ve Fastlane.",
+                            list2: "<strong>Betikleme:</strong> Veri işleme ve bot geliştirme için özel Python ve Shell araçları.",
+                            list3: "<strong>Test:</strong> Otomatik uçtan uca (E2E) test stratejileri.",
+                            list4: "<strong>Süreç:</strong> İş akışı basitleştirme ve geliştirici deneyimi (DevEx) iyileştirmeleri."
+                        }
+                    }
+                }
+            };
+
+            i18next.init({
+                resources,
+                lng: localStorage.getItem('lng') || 'en',
+                fallbackLng: 'en'
+            }, () => {
+                update();
+            });
+
+            function update() {
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    el.innerHTML = i18next.t(el.getAttribute('data-i18n'));
+                });
+                const lng = i18next.language;
+                document.getElementById('lang-en').classList.toggle('active', lng === 'en');
+                document.getElementById('lang-tr').classList.toggle('active', lng === 'tr');
+            }
+
+            document.getElementById('lang-en').onclick = () => i18next.changeLanguage('en', () => {
+                localStorage.setItem('lng', 'en');
+                update();
+            });
+            document.getElementById('lang-tr').onclick = () => i18next.changeLanguage('tr', () => {
+                localStorage.setItem('lng', 'tr');
+                update();
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -7,6 +7,7 @@
     <title>Melih Gökmen | Service Details</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/i18next@23.5.1/dist/umd/i18next.min.js"></script>
     <style>
         body {
             padding-top: 100px;
@@ -59,6 +60,11 @@
         <div class="container">
             <nav>
                 <a href="../" class="logo">Melih.</a>
+                <div class="lang-switcher">
+                    <button id="lang-en" class="lang-btn">EN</button>
+                    <span>/</span>
+                    <button id="lang-tr" class="lang-btn">TR</button>
+                </div>
             </nav>
         </div>
     </header>
@@ -70,20 +76,79 @@
         <div class="detail-card">
             <div id="service-content">
                 <!-- Content will be injected based on the service -->
-                <h2>React Native Development Specialist</h2>
-                <p>I deliver robust cross-platform applications with a focus on code reusability and native performance.
-                    I bridge the gap between web and mobile with precision.</p>
+                <h2 data-i18n="service.title">Flutter Development Specialist</h2>
+                <p data-i18n="service.intro">I build high-quality, high-performance mobile applications using the
+                    Flutter framework and Dart language. My focus is on creating seamless cross-platform experiences
+                    that feel truly native.</p>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> <strong>Modern Stack:</strong> Expo, TypeScript, and React
-                        Query/Redux.</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Native Bridges:</strong> Custom JSI/Native modules for
-                        specialized hardware integration.</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Architecture:</strong> Scalable component-based design
-                        systems.</li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list1"><strong>State
+                                Management:</strong> Expert usage of Riverpod, Provider, and Bloc.</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list2"><strong>Architecture:</strong>
+                            Clean Architecture and Domain-Driven Design (DDD) principles.</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list3"><strong>Network &
+                                API:</strong> Seamless integration with REST APIs and Firebase.</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list4"><strong>Animation:</strong>
+                            Complex custom animations and smooth UI transitions.</span></li>
                 </ul>
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const resources = {
+                en: {
+                    translation: {
+                        service: {
+                            title: "React Native Development Specialist",
+                            intro: "Expert in building cross-platform applications with a focus on code reusability and native performance. I bridge the gap between web and mobile with precision.",
+                            list1: "<strong>Modern Stack:</strong> Expo, TypeScript, and React Query/Redux.",
+                            list2: "<strong>Native Bridges:</strong> Custom JSI/Native modules for specialized hardware integration.",
+                            list3: "<strong>Architecture:</strong> Scalable component-based design systems.",
+                            list4: "<strong>Optimization:</strong> Reducing bundle size and improving startup time."
+                        }
+                    }
+                },
+                tr: {
+                    translation: {
+                        service: {
+                            title: "React Native Geliştirme Uzmanı",
+                            intro: "Kod yeniden kullanılabilirliği ve yerel performansa odaklanan, çapraz platform uygulamaları oluşturma uzmanı. Web ve mobil arasındaki boşluğu hassasiyetle kapatıyorum.",
+                            list1: "<strong>Modern Yığın:</strong> Expo, TypeScript ve React Query/Redux.",
+                            list2: "<strong>Yerel Köprüler:</strong> Donanım entegrasyonu için özel JSI/Yerel modüller.",
+                            list3: "<strong>Mimari:</strong> Ölçeklenebilir bileşen tabanlı tasarım sistemleri.",
+                            list4: "<strong>Optimizasyon:</strong> Paket boyutunu küçültme ve açılış süresini iyileştirme."
+                        }
+                    }
+                }
+            };
+
+            i18next.init({
+                resources,
+                lng: localStorage.getItem('lng') || 'en',
+                fallbackLng: 'en'
+            }, () => {
+                update();
+            });
+
+            function update() {
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    el.innerHTML = i18next.t(el.getAttribute('data-i18n'));
+                });
+                const lng = i18next.language;
+                document.getElementById('lang-en').classList.toggle('active', lng === 'en');
+                document.getElementById('lang-tr').classList.toggle('active', lng === 'tr');
+            }
+
+            document.getElementById('lang-en').onclick = () => i18next.changeLanguage('en', () => {
+                localStorage.setItem('lng', 'en');
+                update();
+            });
+            document.getElementById('lang-tr').onclick = () => i18next.changeLanguage('tr', () => {
+                localStorage.setItem('lng', 'tr');
+                update();
+            });
+        });
+    </script>
 </body>
 
 </html>

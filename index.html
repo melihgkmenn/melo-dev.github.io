@@ -7,6 +7,7 @@
   <title>Melih Gökmen | iOS & Mobile Architect</title>
   <meta name="description"
     content="Portfolio of Melih Gökmen, an iOS Developer, React Native Expert, and Automation Specialist." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,10 +69,10 @@
   <!-- About Section -->
   <section id="about" class="reveal">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+      <h2 class="section-title" data-i18n="about.title">About Me</h2>
       <div
         style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">
-        <p>
+        <p data-i18n="about.p1">
           I am a passionate software engineer specializing in <strong>iOS Development</strong> and <strong>React
             Native</strong>.
           With a deep understanding of the Apple ecosystem and cross-platform technologies, I craft applications that
@@ -79,7 +80,7 @@
           only functional but also visually stunning and intuitive.
         </p>
         <br>
-        <p>
+        <p data-i18n="about.p2">
           Beyond mobile apps, I excel in <strong>Automation</strong>, optimizing workflows and building efficiency into
           every project.
           Whether it's native Swift or JavaScript-based ecosystems, I deliver robust, scalable solutions.
@@ -91,7 +92,7 @@
   <!-- Apps Showcase Section -->
   <section id="apps" class="reveal">
     <div class="container">
-      <h2 class="section-title">App Showcase</h2>
+      <h2 class="section-title" data-i18n="apps.title">App Showcase</h2>
       <div class="apps-grid">
         <!-- App 1: Room Vision AI -->
         <div class="app-card reveal">
@@ -99,8 +100,9 @@
             <img src="assets/img/room-vision.png" alt="Room Vision AI">
           </div>
           <div class="app-info">
-            <h3>Room Vision AI: Design Home</h3>
-            <p>AI-powered interior design assistant. Transform your living space with Text-to-Room and Style Transfer
+            <h3 data-i18n="apps.room.title">Room Vision AI: Design Home</h3>
+            <p data-i18n="apps.room.desc">AI-powered interior design assistant. Transform your living space with
+              Text-to-Room and Style Transfer
               technology.</p>
             <div class="app-tags">
               <span>SwiftUI</span>
@@ -109,7 +111,7 @@
             </div>
             <a href="https://apps.apple.com/tr/app/room-vision-ai-design-home/id6757767066" target="_blank"
               class="btn-app">
-              <i class="fa-brands fa-apple"></i> View on App Store
+              <i class="fa-brands fa-apple"></i> <span data-i18n="apps.view_app">View on App Store</span>
             </a>
           </div>
         </div>
@@ -120,8 +122,9 @@
             <img src="assets/img/proflow.png" alt="ProFlow Habit Tracker">
           </div>
           <div class="app-info">
-            <h3>ProFlow: Habit & Task Tracker</h3>
-            <p>ADHD-friendly planner designed for mental clarity. Build better routines and master your daily
+            <h3 data-i18n="apps.proflow.title">ProFlow: Habit & Task Tracker</h3>
+            <p data-i18n="apps.proflow.desc">ADHD-friendly planner designed for mental clarity. Build better routines
+              and master your daily
               productivity.</p>
             <div class="app-tags">
               <span>React Native</span>
@@ -130,7 +133,7 @@
             </div>
             <a href="https://apps.apple.com/tr/app/proflow-habit-task-tracker/id6499059178" target="_blank"
               class="btn-app">
-              <i class="fa-brands fa-apple"></i> View on App Store
+              <i class="fa-brands fa-apple"></i> <span data-i18n="apps.view_app">View on App Store</span>
             </a>
           </div>
         </div>
@@ -141,8 +144,9 @@
             <img src="assets/img/sudoku-glass.png" alt="Sudoku Glass">
           </div>
           <div class="app-info">
-            <h3>Sudoku Glass</h3>
-            <p>A minimalist Sudoku experience with a stunning glass-morphic interface. Simple, elegant, and mentally
+            <h3 data-i18n="apps.sudoku.title">Sudoku Glass</h3>
+            <p data-i18n="apps.sudoku.desc">A minimalist Sudoku experience with a stunning glass-morphic interface.
+              Simple, elegant, and mentally
               stimulating.</p>
             <div class="app-tags">
               <span>SwiftUI</span>
@@ -150,7 +154,7 @@
               <span>Glassmorphism</span>
             </div>
             <a href="https://apps.apple.com/tr/app/sudoku-glass/id6754257127" target="_blank" class="btn-app">
-              <i class="fa-brands fa-apple"></i> View on App Store
+              <i class="fa-brands fa-apple"></i> <span data-i18n="apps.view_app">View on App Store</span>
             </a>
           </div>
         </div>
@@ -161,7 +165,7 @@
   <!-- Services Section -->
   <section id="services">
     <div class="container">
-      <h2 class="section-title reveal">What I Do</h2>
+      <h2 class="section-title reveal" data-i18n="services.header">What I Do</h2>
 
       <div class="services-grid">
         <!-- Service 1: iOS -->
@@ -226,13 +230,15 @@
   <!-- Footer / Contact -->
   <footer id="contact">
     <div class="container reveal">
-      <h2 style="margin-bottom: 30px;">Let's Connect</h2>
+      <h2 style="margin-bottom: 30px;" data-i18n="footer.connect_title">Let's Connect</h2>
       <div class="social-links">
+        <a href="https://www.upwork.com/freelancers/~012bd571a0c1c2fc04" target="_blank" title="Upwork"><i
+            class="fa-brands fa-upwork"></i></a>
         <a href="https://www.linkedin.com/in/melih-gokmen-ios/" target="_blank" title="LinkedIn"><i
             class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://github.com/melihgkmenn" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="https://x.com/mlgkmn" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.instagram.com/mlgkmen" target="_blank" title="Instagram"><i
+        <a href="https://www.instagram.com/mlgkmn" target="_blank" title="Instagram"><i
             class="fa-brands fa-instagram"></i></a>
         <a href="https://medium.com/@melih.xcodeproj" target="_blank" title="Medium"><i
             class="fa-brands fa-medium"></i></a>
@@ -242,11 +248,12 @@
             class="fa-brands fa-goodreads-g"></i></a>
         <a href="mailto:melihgkmen@outlook.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
-      <p style="margin-bottom: 20px;"><a href="links/" class="btn-links">View All My Links <i
-            class="fa-solid fa-arrow-right"></i></a></p>
-      <p style="color: var(--text-secondary);">&copy; 2025 Melih Gökmen. Built with ☕ and Code.</p>
-      <p style="margin-top: 10px;"><a href="privacy-policy/"
-          style="font-size: 0.85rem; color: var(--text-secondary);">Privacy Policy / Gizlilik Politikası</a></p>
+      <p style="margin-bottom: 20px;"><a href="links/" class="btn-links" data-i18n="footer.all_links">View All My Links
+          <i class="fa-solid fa-arrow-right"></i></a></p>
+      <p style="color: var(--text-secondary);" data-i18n="footer.copy">&copy; 2025 Melih Gökmen. Built with ☕ and Code.
+      </p>
+      <p style="margin-top: 10px;"><a href="privacy-policy/" style="font-size: 0.85rem; color: var(--text-secondary);"
+          data-i18n="footer.privacy">Privacy Policy / Gizlilik Politikası</a></p>
     </div>
   </footer>
 
