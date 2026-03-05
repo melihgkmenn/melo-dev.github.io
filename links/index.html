@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melih Gökmen | Links</title>
+    <meta name="description" content="Connect with Melih Gökmen across social media and professional platforms." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-main: #ffffff;
+            --text-secondary: #8b949e;
+            --accent-primary: #58a6ff;
+            --accent-secondary: #a371f7;
+            --card-bg: rgba(22, 27, 34, 0.8);
+            --glass-border: rgba(240, 246, 252, 0.1);
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background: radial-gradient(circle at 50% 0%, rgba(88, 166, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(163, 113, 247, 0.1) 0%, transparent 40%);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--text-main);
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .bio {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px;
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
+        }
+
+        .link-item i {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .link-item:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-primary);
+            background: rgba(88, 166, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--glass-border);
+            width: 100%;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            color: var(--accent-primary);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .link-item {
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .link-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .link-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .link-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .link-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .link-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .link-item:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .link-item:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .link-item:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../"><img src="https://github.com/melihgkmen.png" alt="Melih Gökmen" class="profile-pic"></a>
+        <h1>Melih Gökmen</h1>
+        <p class="bio">iOS Developer | React Native Expert | Mobile Architect</p>
+
+        <div class="links-list">
+            <a href="https://www.linkedin.com/in/melih-gokmen-ios/" target="_blank" class="link-item">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="https://x.com/mlgkmn" target="_blank" class="link-item">
+                <i class="fa-brands fa-x-twitter"></i> X (Twitter)
+            </a>
+            <a href="https://github.com/melihgkmenn" target="_blank" class="link-item">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://www.instagram.com/mlgkmen" target="_blank" class="link-item">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://medium.com/@melih.xcodeproj" target="_blank" class="link-item">
+                <i class="fa-brands fa-medium"></i> Medium
+            </a>
+            <a href="https://www.producthunt.com/@mlgkmn" target="_blank" class="link-item">
+                <i class="fa-brands fa-product-hunt"></i> Product Hunt
+            </a>
+            <a href="https://www.goodreads.com/user/show/86313455-melih-g" target="_blank" class="link-item">
+                <i class="fa-brands fa-goodreads-g"></i> Goodreads
+            </a>
+            <a href="mailto:melihgkmen@outlook.com" class="link-item">
+                <i class="fa-solid fa-envelope"></i> Email Me
+            </a>
+        </div>
+
+        <div class="footer">
+            <a href="../" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+        </div>
+    </div>
+</body>
+
+</html>
