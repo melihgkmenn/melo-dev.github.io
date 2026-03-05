@@ -3,13 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resources = {
     en: {
       translation: {
-        nav: {
-          about: 'About',
-          apps: 'Apps',
-          services: 'Services',
-          connect: 'Connect',
-          contact: 'Contact'
-        },
+        nav: { about: 'About', apps: 'Apps', services: 'Services', connect: 'Connect', contact: 'Contact' },
         hero: {
           greeting: "Hi, I'm Melih Gökmen",
           subheadline: "Building world-class mobile experiences with precision and passion.",
@@ -24,38 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
         apps: {
           title: "App Showcase",
           view_app: "View on App Store",
-          room: {
-            title: "Room Vision AI: Design Home",
-            desc: "AI-powered interior design assistant. Transform your living space with Text-to-Room and Style Transfer technology."
-          },
-          proflow: {
-            title: "ProFlow: Habit & Task Tracker",
-            desc: "ADHD-friendly planner designed for mental clarity. Build better routines and master your daily productivity."
-          },
-          sudoku: {
-            title: "Sudoku Glass",
-            desc: "A minimalist Sudoku experience with a stunning glass-morphic interface. Simple, elegant, and mentally stimulating."
-          }
+          room: { title: "Room Vision AI: Design Home", desc: "AI-powered interior design assistant. Transform your living space with Text-to-Room and Style Transfer technology." },
+          proflow: { title: "ProFlow: Habit & Task Tracker", desc: "ADHD-friendly planner designed for mental clarity. Build better routines and master your daily productivity." },
+          sudoku: { title: "Sudoku Glass", desc: "A minimalist Sudoku experience with a stunning glass-morphic interface. Simple, elegant, and mentally stimulating." }
         },
         services: {
           header: "What I Do",
           learn_more: "Learn More",
-          ios: {
-            title: "iOS Development",
-            desc: "Native iOS apps built with Swift and SwiftUI/UIKit. Focus on performance and human interface guidelines."
-          },
-          flutter: {
-            title: "Flutter Development",
-            desc: "High-performance cross-platform apps with Dart. Beautiful UIs and unified codebase for iOS & Android."
-          },
-          rn: {
-            title: "React Native",
-            desc: "Dual platform deployment with single codebase. Scalable and efficient cross-platform solutions."
-          },
-          automation: {
-            title: "Automation & Tools",
-            desc: "Custom scripts and CI/CD pipelines to streamline development and business processes."
-          }
+          ios: { title: "iOS Development", desc: "Native iOS apps built with Swift and SwiftUI/UIKit. Focus on performance and human interface guidelines." },
+          flutter: { title: "Flutter Development", desc: "High-performance cross-platform apps with Dart. Beautiful UIs and unified codebase for iOS & Android." },
+          rn: { title: "React Native", desc: "Dual platform deployment with single codebase. Scalable and efficient cross-platform solutions." },
+          automation: { title: "Automation & Tools", desc: "Custom scripts and CI/CD pipelines to streamline development and business processes." }
         },
         footer: {
           connect_title: "Let's Connect",
@@ -68,13 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     tr: {
       translation: {
-        nav: {
-          about: 'Hakkımda',
-          apps: 'Uygulamalar',
-          services: 'Hizmetler',
-          connect: 'Bağlantılar',
-          contact: 'İletişim'
-        },
+        nav: { about: 'Hakkımda', apps: 'Uygulamalar', services: 'Hizmetler', connect: 'Bağlantılar', contact: 'İletişim' },
         hero: {
           greeting: "Selam, Ben Melih Gökmen",
           subheadline: "Üst düzey mobil deneyimleri hassasiyet ve tutkuyla inşa ediyorum.",
@@ -89,38 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
         apps: {
           title: "Uygulama Vitrini",
           view_app: "App Store'da Gör",
-          room: {
-            title: "Room Vision AI: Ev Tasarımı",
-            desc: "Yapay zeka destekli iç tasarım asistanı. Yaşam alanınızı Metinden Odaya ve Stil Transferi teknolojisiyle dönüştürün."
-          },
-          proflow: {
-            title: "ProFlow: Alışkanlık Takibi",
-            desc: "Zihinsel netlik için tasarlanmış DEHB dostu planlayıcı. Daha iyi rutinler oluşturun ve günlük verimliliğinizde ustalaşın."
-          },
-          sudoku: {
-            title: "Sudoku Glass",
-            desc: "Çarpıcı bir cam-morfik arayüze sahip minimalist bir Sudoku deneyimi. Basit, zarif ve zihinsel olarak uyarıcı."
-          }
+          room: { title: "Room Vision AI: Ev Tasarımı", desc: "Yapay zeka destekli iç tasarım asistanı. Yaşam alanınızı Metinden Odaya ve Stil Transferi teknolojisiyle dönüştürün." },
+          proflow: { title: "ProFlow: Alışkanlık Takibi", desc: "Zihinsel netlik için tasarlanmış DEHB dostu planlayıcı. Daha iyi rutinler oluşturun ve günlük verimliliğinizde ustalaşın." },
+          sudoku: { title: "Sudoku Glass", desc: "Çarpıcı bir cam-morfik arayüze sahip minimalist bir Sudoku deneyimi. Basit, zarif ve zihinsel olarak uyarıcı." }
         },
         services: {
           header: "Neler Yapıyorum",
           learn_more: "Daha Fazla Bilgi",
-          ios: {
-            title: "iOS Geliştirme",
-            desc: "Swift ve SwiftUI/UIKit ile geliştirilen yerel iOS uygulamaları. Performansa ve Apple tasarım kurallarına (HIG) odaklanılır."
-          },
-          flutter: {
-            title: "Flutter Geliştirme",
-            desc: "Dart ile yüksek performanslı çapraz platform uygulamalar. iOS ve Android için bütünleşik kod tabanı ve şık arayüzler."
-          },
-          rn: {
-            title: "React Native",
-            desc: "Tek bir kod tabanı ile çift platform yaygınlaştırma. Ölçeklenebilir ve verimli çapraz platform çözümleri."
-          },
-          automation: {
-            title: "Otomasyon ve Araçlar",
-            desc: "Geliştirme ve iş süreçlerini kolaylaştırmak için özel betikler ve CI/CD süreçleri."
-          }
+          ios: { title: "iOS Geliştirme", desc: "Swift ve SwiftUI/UIKit ile geliştirilen yerel iOS uygulamaları. Performansa ve Apple tasarım kurallarına (HIG) odaklanılır." },
+          flutter: { title: "Flutter Geliştirme", desc: "Dart ile yüksek performanslı çapraz platform uygulamalar. iOS ve Android için bütünleşik kod tabanı ve şık arayüzler." },
+          rn: { title: "React Native", desc: "Tek bir kod tabanı ile çift platform yaygınlaştırma. Ölçeklenebilir ve verimli çapraz platform çözümleri." },
+          automation: { title: "Otomasyon ve Araçlar", desc: "Geliştirme ve iş süreçlerini kolaylaştırmak için özel betikler ve CI/CD süreçleri." }
         },
         footer: {
           connect_title: "Bağlantıda Kalalım",
@@ -133,31 +79,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  i18next
-    .init({
+  // Safe checks for i18next
+  if (typeof i18next !== 'undefined') {
+    const detector = typeof i18nextBrowserLanguageDetector !== 'undefined' ? i18nextBrowserLanguageDetector : null;
+    let i18nInstance = i18next;
+
+    if (detector) {
+      i18nInstance = i18nInstance.use(detector);
+    }
+
+    i18nInstance.init({
       resources,
-      lng: localStorage.getItem('lng') || 'en',
       fallbackLng: 'en',
+      detection: {
+        order: ['localStorage', 'navigator'],
+        lookupLocalStorage: 'lng',
+        caches: ['localStorage']
+      },
       debug: false
     }, (err, t) => {
+      if (err) return console.error(err);
       updateContent();
       updateActiveButton(i18next.language);
+      startTypewriter(); // Start after init
     });
+  } else {
+    // If i18next fails, still try to run other features
+    console.error('i18next not loaded');
+    startTypewriter();
+  }
 
   function updateContent() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      el.innerHTML = i18next.t(key);
+      if (i18next.exists(key)) {
+        el.innerHTML = i18next.t(key);
+      }
     });
 
-    // Refresh typewriter strings
-    currentTypewriterStrings = i18next.t('typewriter', { returnObjects: true });
-    textIndex = 0;
-    charIndex = 0;
+    // Update typewriter if it exists
+    if (i18next.exists('typewriter')) {
+      currentTypewriterStrings = i18next.t('typewriter', { returnObjects: true });
+    }
   }
 
   function updateActiveButton(lng) {
-    if (lng === 'tr') {
+    const lang = lng ? lng.split('-')[0] : 'en'; // handle pt-BR etc
+    const btnEn = document.getElementById('lang-en');
+    const btnTr = document.getElementById('lang-tr');
+    if (lang === 'tr') {
       btnTr?.classList.add('active');
       btnEn?.classList.remove('active');
     } else {
@@ -187,13 +157,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Typewriter Effect ---
   const textElement = document.getElementById('typing-text');
-  let currentTypewriterStrings = i18next.exists('typewriter') ? i18next.t('typewriter', { returnObjects: true }) : ['iOS Developer', 'Flutter Specialist', 'React Native Expert', 'Mobile Architect'];
+  let currentTypewriterStrings = ['iOS Developer', 'Flutter Specialist', 'React Native Expert', 'Mobile Architect'];
   let textIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
   let typeSpeed = 100;
+  let typewriterTimeout;
 
   function type() {
+    if (!textElement) return;
     const currentText = currentTypewriterStrings[textIndex];
     if (isDeleting) {
       textElement.textContent = currentText.substring(0, charIndex - 1);
@@ -213,10 +185,17 @@ document.addEventListener('DOMContentLoaded', () => {
       textIndex = (textIndex + 1) % currentTypewriterStrings.length;
       typeSpeed = 500;
     }
-    setTimeout(type, typeSpeed);
+    typewriterTimeout = setTimeout(type, typeSpeed);
   }
 
-  if (textElement) type();
+  function startTypewriter() {
+    if (textElement && !typewriterTimeout) {
+      if (typeof i18next !== 'undefined' && i18next.exists('typewriter')) {
+        currentTypewriterStrings = i18next.t('typewriter', { returnObjects: true });
+      }
+      type();
+    }
+  }
 
   // --- Scroll Reveal ---
   const revealElements = document.querySelectorAll('.reveal');
@@ -227,14 +206,22 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   };
-  const observer = new IntersectionObserver(revealCallback, { threshold: 0.15 });
-  revealElements.forEach(el => observer.observe(el));
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(revealCallback, { threshold: 0.05 });
+    revealElements.forEach(el => observer.observe(el));
+  } else {
+    // Fallback for older browsers
+    revealElements.forEach(el => el.classList.add('active'));
+  }
 
   // --- Smooth Scrolling ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' });
       }

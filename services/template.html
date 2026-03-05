@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melih Gökmen | iOS Development</title>
+    <title>Melih Gökmen | Service Details</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/i18next@23.5.1/dist/umd/i18next.min.js"></script>
@@ -75,18 +75,13 @@
         </div>
         <div class="detail-card">
             <div id="service-content">
-                <h2 data-i18n="service.title">iOS Development Specialist</h2>
-                <p data-i18n="service.intro">Expert in building native iOS applications using Apple's latest
-                    technologies.</p>
+                <h2 data-i18n="service.title">SERVICE_TITLE</h2>
+                <p data-i18n="service.intro">SERVICE_INTRO</p>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list1"><strong>Swift &
-                                SwiftUI:</strong> Modern UI development.</span></li>
-                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list2"><strong>Performance:</strong>
-                            Memory management and animations.</span></li>
-                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list3"><strong>Ecosystem:</strong>
-                            iCloud and App Intents.</span></li>
-                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list4"><strong>Architecture:</strong>
-                            MVVM and Coordinator pattern.</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list1">LIST_ITEM_1</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list2">LIST_ITEM_2</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list3">LIST_ITEM_3</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="service.list4">LIST_ITEM_4</span></li>
                 </ul>
             </div>
         </div>
@@ -97,24 +92,24 @@
                 en: {
                     translation: {
                         service: {
-                            title: "iOS Development Specialist",
-                            intro: "Expert in building native iOS applications using Apple's latest technologies. I deliver high-performance, polished apps that follow Apple's Human Interface Guidelines.",
-                            list1: "<strong>Swift & SwiftUI:</strong> Modern, declarative UI development.",
-                            list2: "<strong>Performance:</strong> Memory management (ARC) and smooth 60/120 FPS animations.",
-                            list3: "<strong>Ecosystem:</strong> WidgetKit, App Intents, and iCloud integration.",
-                            list4: "<strong>Architecture:</strong> Model-View-ViewModel (MVVM) and Coordinator patterns."
+                            title: "EN_TITLE",
+                            intro: "EN_INTRO",
+                            list1: "EN_LIST1",
+                            list2: "EN_LIST2",
+                            list3: "EN_LIST3",
+                            list4: "EN_LIST4"
                         }
                     }
                 },
                 tr: {
                     translation: {
                         service: {
-                            title: "iOS Geliştirme Uzmanı",
-                            intro: "Apple'ın en son teknolojilerini kullanarak yerel iOS uygulamaları oluşturma uzmanı. Apple'ın İnsan Arayüzü Yönergelerine (HIG) uygun, yüksek performanslı ve cilalı uygulamalar sunuyorum.",
-                            list1: "<strong>Swift ve SwiftUI:</strong> Modern, bildirimsel UI geliştirme.",
-                            list2: "<strong>Performans:</strong> Bellek yönetimi (ARC) ve pürüzsüz 60/120 FPS animasyonlar.",
-                            list3: "<strong>Ekosistem:</strong> WidgetKit, App Intents ve iCloud entegrasyonu.",
-                            list4: "<strong>Mimari:</strong> Model-View-ViewModel (MVVM) ve Coordinator desenleri."
+                            title: "TR_TITLE",
+                            intro: "TR_INTRO",
+                            list1: "TR_LIST1",
+                            list2: "TR_LIST2",
+                            list3: "TR_LIST3",
+                            list4: "TR_LIST4"
                         }
                     }
                 }
@@ -128,6 +123,8 @@
                 }, () => {
                     update();
                 });
+            } else {
+                console.error('i18next not loaded');
             }
 
             function update() {
