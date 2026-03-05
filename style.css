@@ -516,23 +516,11 @@ footer {
   }
 }
 
-/* Scroll reveal utility class */
+/* Main Sections Visibility */
 .reveal {
-  opacity: 1;
-  /* Changed from 0 to 1 for safety */
-  transform: none;
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* If JS is active, we can start them hidden and reveal */
-.js-enabled .reveal:not(.active) {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.reveal.active {
   opacity: 1 !important;
-  transform: translateY(0) !important;
+  transform: none !important;
+  visibility: visible !important;
 }
 
 /* Responsive */

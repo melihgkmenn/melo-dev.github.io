@@ -203,31 +203,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // --- Scroll Reveal ---
-  const revealElements = document.querySelectorAll('.reveal');
-  const revealCallback = (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  };
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(revealCallback, {
-      threshold: 0.05,
-      rootMargin: '0px 0px -50px 0px'
-    });
-    revealElements.forEach(el => observer.observe(el));
-
-    // Safety fallback: Reveal all after 2.5 seconds if observer hasn't triggered
-    setTimeout(() => {
-      revealElements.forEach(el => el.classList.add('active'));
-    }, 2500);
-  } else {
-    // Fallback for older browsers
-    revealElements.forEach(el => el.classList.add('active'));
-  }
+  // --- Section Visibility ---
+  // Ensure all sections are visible immediately
+  document.querySelectorAll('.reveal').forEach(el => {
+    el.classList.add('active');
+  });
 
   // --- Smooth Scrolling ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
