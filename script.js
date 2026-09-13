@@ -36,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
           connect_title: "Let's Connect",
           all_links: "View All My Links",
           copy: "&copy; 2025 Melih Gökmen. Built with ☕ and Code.",
-          privacy: "Privacy Policy / Gizlilik Politikası"
+          privacy: "Privacy Policy / Gizlilik Politikası",
+          child_safety: "Child Safety Standards (CSAE)"
         },
         typewriter: ['iOS Developer', 'Flutter Specialist', 'React Native Expert', 'Mobile Architect']
       }
@@ -74,7 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
           connect_title: "Bağlantıda Kalalım",
           all_links: "Tüm Bağlantılarımı Gör",
           copy: "&copy; 2025 Melih Gökmen. ☕ ve Kod ile inşa edildi.",
-          privacy: "Gizlilik Politikası / Privacy Policy"
+          privacy: "Gizlilik Politikası / Privacy Policy",
+          child_safety: "Çocuk Güvenliği Standartları (CSAE)"
         },
         typewriter: ['iOS Geliştirici', 'Flutter Uzmanı', 'React Native Uzmanı', 'Mobil Mimar']
       }
